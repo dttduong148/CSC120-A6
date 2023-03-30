@@ -5,6 +5,16 @@ public class Cafe extends Building {
     private int nCreams; // The number of "splashes" of cream remaining in inventory
     private int nCups; // The number of cups remaining in inventory
 
+    /**
+     * Constructor for class Cafe
+     * @param name
+     * @param address
+     * @param nFloors
+     * @param nCoffeeOunces
+     * @param nSugarPackets
+     * @param nCreams
+     * @param nCups
+     */
     public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
         super(name, address, nFloors);
         this.nCoffeeOunces = nCoffeeOunces;
@@ -15,6 +25,12 @@ public class Cafe extends Building {
         System.out.println("You have built a cafe: ☕");
     }
     
+    /**
+     * Method to sell coffee and decrease the amount/number of coffee, sugar packets, cream pumps, and cups.
+     * @param size
+     * @param nSugarPackets
+     * @param nCreams
+     */
     public void sellCoffee(int size, int nSugarPackets, int nCreams) {
         this.nCoffeeOunces -= size;
         this.nSugarPackets -= nSugarPackets;
@@ -25,6 +41,13 @@ public class Cafe extends Building {
         }
     }
 
+    /**
+     * Method to refill the amount/number of coffee, sugar packets, cream pumps, and cups.
+     * @param nCoffeeOunces
+     * @param nSugarPackets
+     * @param nCreams
+     * @param nCups
+     */
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
         this.nCoffeeOunces = nCoffeeOunces;
         this.nSugarPackets = nSugarPackets;
